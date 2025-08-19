@@ -1,0 +1,29 @@
+.product-card {
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.image-container {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f8f9fa;
+  padding: 15px;
+}
+
+.image-container img {
+  max-height: 180px;
+  object-fit: contain;
+}
+.page-body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #00c6ff, #0072ff, #5f2c82);
+  background-size: 300% 300%;
+  animation: gradientBG 12s ease infinite;
+}
