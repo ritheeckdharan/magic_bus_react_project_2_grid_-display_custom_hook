@@ -6,14 +6,14 @@ const Display = () => {
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState("");
 
-  // Filtering
+  
   const filteredData = data
     ? data.filter((item) =>
         item.title.toLowerCase().includes(search.toLowerCase())
       )
     : [];
 
-  // Sorting
+  
   const sortedData = [...filteredData].sort((a, b) => {
     if (sort === "low-high") return a.price - b.price;
     if (sort === "high-low") return b.price - a.price;
@@ -28,7 +28,7 @@ const Display = () => {
           🛒 Trending Products
         </h2>
 
-        {/* Search + Sort Controls */}
+        
         <div className="row mb-4 align-items-center">
           <div className="col-md-6 mb-2">
             <input
@@ -55,7 +55,7 @@ const Display = () => {
           </div>
         </div>
 
-        {/* Product Grid */}
+      
         <div className="row g-4">
           {sortedData.length > 0 ? (
             sortedData.map((item) => {
